@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(45, 45, 45);
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+
+}
+img{
+    width:14vw;
+    margin:10px;
+}
+#birthday{
+    width:15vw;
+
+}
+#input{
+    display:flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+}
+.item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.caption {
+    display: block;
+}
