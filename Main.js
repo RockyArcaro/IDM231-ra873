@@ -2,9 +2,6 @@ function dateSubmission(){
   let date = document.getElementById('birthday').value;
   let monthStr = date.substr(5, 2);
   let dayStr = date.substr(8, 2); 
-  let audioPlayer = null
-  let message = ""
-
   const CapricornButton = document.getElementById('capricorn'); 
 
   let month = parseInt(monthStr);
@@ -37,260 +34,124 @@ function dateSubmission(){
   }
 
   let resultImg = document.getElementById('resultImg');
+  var text = document.getElementById("resultText");
+
   if (astrological_sign == 'Capricorn'){
     resultImg.src = "./Photos/AJBrown.jpg" 
     var audio = new Audio('Sounds/Sound1.mp3');
     audio.play();
-    const para = document.createElement("p");
-    const node = document.createTextNode("You are AJ Brown! What is the most valuable resource? For Capricorn, the answer is clear: Time. Capricorn is climbing the mountain straight to the top and knows that patience, perseverance, and dedication is the only way to scale. The last earth sign of the zodiac, Capricorn, is represented by the sea-goat, a mythological creature with the body of a goat and the tail of a fish. Accordingly, Capricorns are skilled at navigating both the material and emotional realms.");
-    para.appendChild(node);
-
-    const element = document.getElementById("result");
-    element.appendChild(para);
-    para.setAttribute("class", "text");
-    para.scrollIntoView();
-
+    text.innerText = "You are AJ Brown! What is the most valuable resource? For Capricorn, the answer is clear: Time. Capricorn is climbing the mountain straight to the top and knows that patience, perseverance, and dedication is the only way to scale. The last earth sign of the zodiac, Capricorn, is represented by the sea-goat, a mythological creature with the body of a goat and the tail of a fish. Accordingly, Capricorns are skilled at navigating both the material and emotional realms.rks"
+    text.scrollIntoView();
   } else if(astrological_sign == 'Sagittarius'){
     resultImg.src = "./Photos/TyreseMaxey.jpg"
     var audio = new Audio('Sounds/Sound2.mp3');
     audio.play();
-    const para = document.createElement("p");
-    const node = document.createTextNode("You are Tyrese Maxey! Oh, the places Sagittarius goes! But… actually. This fire sign knows no bounds. Represented by the archer, Sagittarians are always on a quest for knowledge. The last fire sign of the zodiac, Sagittarius launches its many pursuits like blazing arrows, chasing after geographical, intellectual, and spiritual adventures. ");
-    para.appendChild(node);
-
-    const element = document.getElementById("result");
-    element.appendChild(para);
-    para.setAttribute("class", "text");
-    para.scrollIntoView();
-
+    text.innerText = "You are Tyrese Maxey! Oh, the places Sagittarius goes! But... actually. This fire sign knows no bounds. Represented by the archer, Sagittarians are always on a quest for knowledge. The last fire sign of the zodiac, Sagittarius launches its many pursuits like blazing arrows, chasing after geographical, intellectual, and spiritual adventures. "
+    text.scrollIntoView();
   } else if(astrological_sign == 'Scorpio'){
     resultImg.src = "./Photos/NickCastellanos.jpg"  
     var audio = new Audio('Sounds/Sound3.mp3');
     audio.play();
-    const para = document.createElement("p");
-    const node = document.createTextNode("You are Nick Castellanos! Elusive and mysterious, Scorpio is one of the most misunderstood signs of the zodiac. Scorpio is a water sign that uses emotional energy as fuel, cultivating powerful wisdom through both the physical and unseen realms. In fact, Scorpio derives its extraordinary courage from its psychic abilities, which is what makes this sign one of the most complicated, dynamic signs of the zodiac.");
-    para.appendChild(node);
-
-    const element = document.getElementById("result");
-    element.appendChild(para);
-    para.setAttribute("class", "text");
-    para.scrollIntoView();
-
+    text.innerText = "You are Nick Castellanos! Elusive and mysterious, Scorpio is one of the most misunderstood signs of the zodiac. Scorpio is a water sign that uses emotional energy as fuel, cultivating powerful wisdom through both the physical and unseen realms. In fact, Scorpio derives its extraordinary courage from its psychic abilities, which is what makes this sign one of the most complicated, dynamic signs of the zodiac."
+    text.scrollIntoView();
   } else if(astrological_sign == 'Libra'){
     resultImg.src = "./Photos/MilesSanders.jpg"  
     var audio = new Audio('Sounds/Sound4.mp3');
     audio.play();
-    const para = document.createElement("p");
-    const node = document.createTextNode("You are Miles Sanders! Balance, harmony, and justice define Libra energy. As a cardinal air sign, Libra is represented by the scales (interestingly, the only inanimate object of the zodiac), an association that reflects Libra's fixation on establishing equilibrium. Libra is obsessed with symmetry and strives to create equilibrium in all areas of life — especially when it comes to matters of the heart. ");
-    para.appendChild(node);
-
-    const element = document.getElementById("result");
-    element.appendChild(para);
-    para.setAttribute("class", "text");
-    para.scrollIntoView();
-
+    text.innerText = "You are Miles Sanders! Balance, harmony, and justice define Libra energy. As a cardinal air sign, Libra is represented by the scales (interestingly, the only inanimate object of the zodiac), an association that reflects Libra's fixation on establishing equilibrium. Libra is obsessed with symmetry and strives to create equilibrium in all areas of life - especially when it comes to matters of the heart. "
+    text.scrollIntoView();
   } else if(astrological_sign == 'Virgo'){
     resultImg.src = "./Photos/MatisseThybulle.jpg" 
     var audio = new Audio('Sounds/Sound5.mp3');
     audio.play();
-    const para = document.createElement("p");
-    const node = document.createTextNode("You are Matisse Thybulle! You know the expression, if you want something done, give it to a busy person? Well, that definitely is the Virgo anthem. Virgos are logical, practical, and systematic in their approach to life. Virgo is an earth sign historically represented by the goddess of wheat and agriculture, an association that speaks to Virgo's deep-rooted presence in the material world. This earth sign is a perfectionist at heart and isn’t afraid to improve skills through diligent and consistent practice.");
-    para.appendChild(node);
-
-    const element = document.getElementById("result");
-    element.appendChild(para);
-    para.setAttribute("class", "text");
-    para.scrollIntoView();
-
+    text.innerText = "You are Matisse Thybulle! You know the expression, if you want something done, give it to a busy person? Well, that definitely is the Virgo anthem. Virgos are logical, practical, and systematic in their approach to life. Virgo is an earth sign historically represented by the goddess of wheat and agriculture, an association that speaks to Virgo's deep-rooted presence in the material world. This earth sign is a perfectionist at heart and isn't afraid to improve skills through diligent and consistent practice."
+    text.scrollIntoView();
   } else if(astrological_sign == 'Leo'){
     resultImg.src = "./Photos/KyleShwarber.jpg" 
     var audio = new Audio('Sounds/Sound6.mp3');
     audio.play();
-    const para = document.createElement("p");
-    const node = document.createTextNode("You are Kyle Shwarber! Roll out the red carpet because Leo has arrived. Passionate, loyal, and infamously dramatic, Leo is represented by the lion and these spirited fire signs are the kings and queens of the celestial jungle. They're delighted to embrace their royal status: Vivacious, theatrical, and fiery, Leos love to bask in the spotlight and celebrate… well, themselves.");
-    para.appendChild(node);
-
-    const element = document.getElementById("result");
-    element.appendChild(para);
-    para.setAttribute("class", "text");
-    para.scrollIntoView();
-
+    text.innerText = "You are Kyle Shwarber! Roll out the red carpet because Leo has arrived. Passionate, loyal, and infamously dramatic, Leo is represented by the lion and these spirited fire signs are the kings and queens of the celestial jungle. They're delighted to embrace their royal status: Vivacious, theatrical, and fiery, Leos love to bask in the spotlight and celebrate... well, themselves."
+    text.scrollIntoView();
   } else if(astrological_sign == 'Cancer'){
     resultImg.src = "./Photos/JoelEmbiid.jpg" 
     var audio = new Audio('Sounds/Sound7.mp3');
     audio.play();
-    const para = document.createElement("p");
-    const node = document.createTextNode("You are Joel Embiid! Represented by the crab, Cancer seamlessly weaves between the sea and shore representing Cancer’s ability to exist in both emotional and material realms. Cancers are highly intuitive and their psychic abilities manifest in tangible spaces. But—just like the hard-shelled crustaceans—this water sign is willing to do whatever it takes to protect itself emotionally. In order to get to know this sign, you're going to need to establish trust!");
-    para.appendChild(node);
-
-    const element = document.getElementById("result");
-    element.appendChild(para);
-    para.setAttribute("class", "text");
-    para.scrollIntoView();
-
+    text.innerText = "You are Joel Embiid! Represented by the crab, Cancer seamlessly weaves between the sea and shore representing Cancer's ability to exist in both emotional and material realms. Cancers are highly intuitive and their psychic abilities manifest in tangible spaces. But-just like the hard-shelled crustaceans-this water sign is willing to do whatever it takes to protect itself emotionally. In order to get to know this sign, you're going to need to establish trust!"
+    text.scrollIntoView();
   } else if(astrological_sign == 'Gemini'){
     resultImg.src = "./Photos/JasonKelce.jpg" 
     var audio = new Audio('Sounds/Sound8.mp3');
     audio.play();
-    const para = document.createElement("p");
-    const node = document.createTextNode("You are Jason Kelce! Have you ever been so busy with football, press, and being a singer, that you wished you could clone yourself just to get everything done? That's the Gemini experience in a nutshell. Spontaneous, playful, and adorably erratic, Gemini is driven by its insatiable curiosity. Appropriately symbolized by the celestial twins, this air sign was interested in so many pursuits that it had to double itself.");
-    para.appendChild(node);
-
-    const element = document.getElementById("result");
-    element.appendChild(para);
-    para.setAttribute("class", "text");
-    para.scrollIntoView();
-
-
+    text.innerText = "You are Jason Kelce! Have you ever been so busy with football, press, and being a singer, that you wished you could clone yourself just to get everything done? That's the Gemini experience in a nutshell. Spontaneous, playful, and adorably erratic, Gemini is driven by its insatiable curiosity. Appropriately symbolized by the celestial twins, this air sign was interested in so many pursuits that it had to double itself."
+    text.scrollIntoView();
   } else if(astrological_sign == 'Taurus'){
     resultImg.src = "./Photos/JamesHarden.jpg" 
     var audio = new Audio('Sounds/Sound9.mp3');
     audio.play();
-    const para = document.createElement("p");
-    const node = document.createTextNode("You are James Harden! What sign is more likely to take a six-hour bath, followed by a luxurious Swedish massage and decadent dessert spread? Why Taurus, of course! Taurus is an earth sign represented by the bull. Like their celestial spirit animal, Taureans enjoy relaxing in serene, bucolic environments surrounded by soft sounds, soothing aromas, and succulent flavors.");
-    para.appendChild(node);
-
-    const element = document.getElementById("result");
-    element.appendChild(para);
-    para.setAttribute("class", "text");
-    para.scrollIntoView();
-
+    text.innerText = "You are James Harden! What sign is more likely to take a six-hour bath, followed by a luxurious Swedish massage and decadent dessert spread? Why Taurus, of course! Taurus is an earth sign represented by the bull. Like their celestial spirit animal, Taureans enjoy relaxing in serene, bucolic environments surrounded by soft sounds, soothing aromas, and succulent flavors."
+    text.scrollIntoView();
   } else if(astrological_sign == 'Aries'){
     resultImg.src = "./Photos/JalenHurts.jpg"
     var audio = new Audio('Sounds/Sound10.mp3');
     audio.play();
-    const para = document.createElement("p");
-    const node = document.createTextNode("You are Jalen Hurts! Aries loves to be number one (just like him). Naturally, this dynamic fire sign is no stranger to competition. Bold and ambitious, Aries dives headfirst into even the most challenging situations—and they'll make sure they always come out on top!");
-    para.appendChild(node);
-
-    const element = document.getElementById("result");
-    element.appendChild(para);
-    para.setAttribute("class", "text");
-    para.scrollIntoView();
-
-
+    text.innerText = "You are Jalen Hurts! Aries loves to be number one (just like him). Naturally, this dynamic fire sign is no stranger to competition. Bold and ambitious, Aries dives headfirst into even the most challenging situations-and they'll make sure they always come out on top!"
+    text.scrollIntoView();
   } else if(astrological_sign == 'Pisces'){
     resultImg.src = "./Photos/BryceHarper.jpg" 
     var audio = new Audio('Sounds/Sound11.mp3');
     audio.play();
-    const para = document.createElement("p");
-    const node = document.createTextNode("You are Bryce Harper! If you looked up the word psychic in the dictionary, there would definitely be a picture of Pisces next to it. Pisces is the most intuitive, sensitive, and empathetic sign of the entire zodiac — and that's because it's the last of the last. As the final sign, Pisces has absorbed every lesson — the joys and the pain, the hopes and the fears — learned by all of the other signs. It's symbolized by two fish swimming in opposite directions, representing the constant division of Pisces' attention between fantasy and reality.");
-    para.appendChild(node);
-
-    const element = document.getElementById("result");
-    element.appendChild(para);
-    para.setAttribute("class", "text");
-    para.scrollIntoView();
-
+    text.innerText = "You are Bryce Harper! If you looked up the word psychic in the dictionary, there would definitely be a picture of Pisces next to it. Pisces is the most intuitive, sensitive, and empathetic sign of the entire zodiac - and that's because it's the last of the last. As the final sign, Pisces has absorbed every lesson - the joys and the pain, the hopes and the fears - learned by all of the other signs. It's symbolized by two fish swimming in opposite directions, representing the constant division of Pisces' attention between fantasy and reality."
+    text.scrollIntoView();
   } else if(astrological_sign == 'Aquarius'){
     resultImg.src = "./Photos/BrandonMarsh.jpg" 
     var audio = new Audio('Sounds/Sound12.mp3');
     audio.play();
-
-    //var text = document.createElement( "p" );
-    //var node = document.createTextNode("You are Brandon Marsh! Despite the aqua in its name, Aquarius is actually the last air sign of the zodiac. Innovative, progressive, and shamelessly revolutionary, Aquarius is represented by the water bearer, the mystical healer who bestows water, or life, upon the land. Accordingly, Aquarius is the most humanitarian astrological sign. At the end of the day, Aquarius is dedicated to making the world a better place, Especially by making it to the World Series. ");
-    //text.appendChild(node);
-    //let container = document.getElementById("result");
-    //container.appendChild(text);
-
-    const para = document.createElement("p");
-    const node = document.createTextNode("You are Brandon Marsh! Despite the aqua in its name, Aquarius is actually the last air sign of the zodiac. Innovative, progressive, and shamelessly revolutionary, Aquarius is represented by the water bearer, the mystical healer who bestows water, or life, upon the land. Accordingly, Aquarius is the most humanitarian astrological sign. At the end of the day, Aquarius is dedicated to making the world a better place, Especially by making it to the World Series.");
-    para.appendChild(node);
-
-    const element = document.getElementById("result");
-    element.appendChild(para);
-    para.setAttribute("class", "text");
-    para.scrollIntoView();
-
-    //text.setAttribute( "class", "text" ); 
-
-    //text.appendChild( document.createTextNode( "You are Brandon Marsh! Despite the aqua in its name, Aquarius is actually the last air sign of the zodiac. Innovative, progressive, and shamelessly revolutionary, Aquarius is represented by the water bearer, the mystical healer who bestows water, or life, upon the land. Accordingly, Aquarius is the most humanitarian astrological sign. At the end of the day, Aquarius is dedicated to making the world a better place, Especially by making it to the World Series." ) );
-    
+    text.innerText = "You are Brandon Marsh! Despite the aqua in its name, Aquarius is actually the last air sign of the zodiac. Innovative, progressive, and shamelessly revolutionary, Aquarius is represented by the water bearer, the mystical healer who bestows water, or life, upon the land. Accordingly, Aquarius is the most humanitarian astrological sign. At the end of the day, Aquarius is dedicated to making the world a better place, Especially by making it to the World Series."
+    text.scrollIntoView();
   }
-
-
   console.log(astrological_sign);
   console.log(date);
 }
-
-let x = 0;
-
 let astrological_sign='sign';
+
 let birthday = document.getElementById('submit');
 birthday.addEventListener('click', () => {dateSubmission();});
 
 const capricornButton = document.getElementById('Capricornus');
-capricornButton.addEventListener('click', () => {
-  astrological_sign = 'Capricorn'
-  dateSubmission();
-  x++;
-});
+capricornButton.addEventListener('click', () => {  astrological_sign = 'Capricorn';  dateSubmission(); });
+
 const SagittariusButton = document.getElementById('Saggitarius');
-SagittariusButton.addEventListener('click', () => {
-  astrological_sign = 'Sagittarius'
-  dateSubmission();
-  x++;
-});
+SagittariusButton.addEventListener('click', () => {  astrological_sign = 'Sagittarius';  dateSubmission(); });
+
 const ScorpioButton = document.getElementById('Scorpio');
-ScorpioButton.addEventListener('click', () => {
-  astrological_sign = 'Scorpio'
-  dateSubmission();
-  x++;
-});
+ScorpioButton.addEventListener('click', () => {  astrological_sign = 'Scorpio';  dateSubmission(); });
+
 const LibraButton = document.getElementById('Libra');
-LibraButton.addEventListener('click', () => {
-  astrological_sign = 'Libra'
-  dateSubmission();
-  x++;
-});
+LibraButton.addEventListener('click', () => {  astrological_sign = 'Libra';  dateSubmission(); });
+
 const VirgoButton = document.getElementById('Virgo');
-VirgoButton.addEventListener('click', () => {
-  astrological_sign = 'Virgo'
-  dateSubmission();
-  x++;
-});
+VirgoButton.addEventListener('click', () => { astrological_sign = 'Virgo'; dateSubmission(); });
+
 const LeoButton = document.getElementById('Leo');
-LeoButton.addEventListener('click', () => {
-  astrological_sign = 'Leo'
-  dateSubmission();
-  x++;
-});
+LeoButton.addEventListener('click', () => {  astrological_sign = 'Leo';   dateSubmission(); });
+
 const CancerButton = document.getElementById('Cancer');
-CancerButton.addEventListener('click', () => {
-  astrological_sign = 'Cancer'
-  dateSubmission();
-  x++;
-});
+CancerButton.addEventListener('click', () => {  astrological_sign = 'Cancer';  dateSubmission();});
+
 const GeminiButton = document.getElementById('Gemini');
-GeminiButton.addEventListener('click', () => {
-  astrological_sign = 'Gemini'
-  dateSubmission();
-  x++;
-});
+GeminiButton.addEventListener('click', () => {  astrological_sign = 'Gemini';   dateSubmission(); });
+
 const TaurusButton = document.getElementById('Taurus');
-TaurusButton.addEventListener('click', () => {
-  astrological_sign = 'Taurus'
-  dateSubmission();
-  x++;
-});
+TaurusButton.addEventListener('click', () => {  astrological_sign = 'Taurus';  dateSubmission(); });
+
 const AriesButton = document.getElementById('Aries');
-AriesButton.addEventListener('click', () => {
-  astrological_sign = 'Aries'
-  dateSubmission();
-  x++;
-});
+AriesButton.addEventListener('click', () => {  astrological_sign = 'Aries';  dateSubmission(); });
+
 const PiscesButton = document.getElementById('Pisces');
-PiscesButton.addEventListener('click', () => {
-  astrological_sign = 'Pisces'
-  dateSubmission();
-  x++;
-});
+PiscesButton.addEventListener('click', () => {  astrological_sign = 'Pisces';  dateSubmission(); });
+
 const AquariusButton = document.getElementById('Aquarius');
-AquariusButton.addEventListener('click', () => {
-  astrological_sign = 'Aquarius'
-  dateSubmission();
-  x++;
-});
+AquariusButton.addEventListener('click', () => {  astrological_sign = 'Aquarius';  dateSubmission(); });
 
 var help = document.getElementById('help');
 help.addEventListener('click', () =>{
