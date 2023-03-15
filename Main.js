@@ -1,11 +1,25 @@
 function dateSubmission(){
+  
+  //Code that pulls birthdate from form and makes them integer values
+
   let date = document.getElementById('birthday').value;
   let monthStr = date.substr(5, 2);
   let dayStr = date.substr(8, 2); 
+  let yearStr = date.substr(0, 4);
   const CapricornButton = document.getElementById('capricorn'); 
 
   let month = parseInt(monthStr);
   let day = parseInt(dayStr);
+
+  let todaysDate = Date();
+  console.log(todaysDate);
+  console.log(yearStr);
+
+  if(todaysDate < date){
+    
+  }
+
+//Code that determines astrological sign based off of form input
 
     if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
     astrological_sign = 'Capricorn'
@@ -35,6 +49,9 @@ function dateSubmission(){
 
   let resultImg = document.getElementById('resultImg');
   var text = document.getElementById("resultText");
+
+
+//Code that displays outcome images, sounds, and text based on astrological sign value
 
   if (astrological_sign == 'Capricorn'){
     resultImg.src = "./Photos/AJBrown.jpg" 
@@ -114,6 +131,9 @@ function dateSubmission(){
 }
 let astrological_sign='sign';
 
+
+//Code that allows the user to click on their sign image and sets astrological sign value to that allowing them to see the message
+
 let birthday = document.getElementById('submit');
 birthday.addEventListener('click', () => {dateSubmission();});
 
@@ -153,7 +173,3 @@ PiscesButton.addEventListener('click', () => {  astrological_sign = 'Pisces';  d
 const AquariusButton = document.getElementById('Aquarius');
 AquariusButton.addEventListener('click', () => {  astrological_sign = 'Aquarius';  dateSubmission(); });
 
-var help = document.getElementById('help');
-help.addEventListener('click', () =>{
-  window.alert("select your sign or input your birthday to get your zodiac message!");
-})
