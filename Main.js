@@ -1,7 +1,7 @@
-function dateSubmission() {
-
+function dateSubmission(){
+  
   //Code that pulls birthdate from form and makes them integer values
-
+  console.log('click');
   let date = document.getElementById('birthday').value;
   let monthStr = date.substr(5, 2);
   let dayStr = date.substr(8, 2); 
@@ -10,14 +10,6 @@ function dateSubmission() {
 
   let month = parseInt(monthStr);
   let day = parseInt(dayStr);
-
-  let todaysDate = Date();
-  console.log(todaysDate);
-  console.log(yearStr);
-
-  if(todaysDate < date){
-    
-  }
 
 //Code that determines astrological sign based off of form input
 
@@ -46,12 +38,15 @@ function dateSubmission() {
   } else if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
     astrological_sign = 'Aquarius'
   }
+  result();
+
+}
 
   let resultImg = document.getElementById('resultImg');
   var text = document.getElementById("resultText");
-}
 
 //Code that displays outcome images, sounds, and text based on astrological sign value
+
 function result(){
   if (astrological_sign == 'Capricorn'){
     resultImg.src = "./Photos/AJBrown.jpg" 
@@ -127,7 +122,6 @@ function result(){
     text.scrollIntoView();
   }
   console.log(astrological_sign);
-  console.log(date);
 }
 let astrological_sign='sign';
 
@@ -162,14 +156,14 @@ const GeminiButton = document.getElementById('Gemini');
 GeminiButton.addEventListener('click', () => {  astrological_sign = 'Gemini';   result(); });
 
 const TaurusButton = document.getElementById('Taurus');
-TaurusButton.addEventListener('click', () => {  astrological_sign = 'Taurus';  dateSubmission(); });
+TaurusButton.addEventListener('click', () => {  astrological_sign = 'Taurus';  result(); });
 
 const AriesButton = document.getElementById('Aries');
-AriesButton.addEventListener('click', () => {  astrological_sign = 'Aries';  dateSubmission(); });
+AriesButton.addEventListener('click', () => {  astrological_sign = 'Aries';  result(); });
 
 const PiscesButton = document.getElementById('Pisces');
-PiscesButton.addEventListener('click', () => {  astrological_sign = 'Pisces';  dateSubmission(); });
+PiscesButton.addEventListener('click', () => {  astrological_sign = 'Pisces';  result(); });
 
 const AquariusButton = document.getElementById('Aquarius');
-AquariusButton.addEventListener('click', () => {  astrological_sign = 'Aquarius';  dateSubmission(); });
+AquariusButton.addEventListener('click', () => {  astrological_sign = 'Aquarius';  result(); });
 
