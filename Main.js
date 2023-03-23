@@ -1,5 +1,5 @@
-function dateSubmission(){
-  
+function dateSubmission() {
+
   //Code that pulls birthdate from form and makes them integer values
 
   let date = document.getElementById('birthday').value;
@@ -49,10 +49,10 @@ function dateSubmission(){
 
   let resultImg = document.getElementById('resultImg');
   var text = document.getElementById("resultText");
-
+}
 
 //Code that displays outcome images, sounds, and text based on astrological sign value
-
+function result(){
   if (astrological_sign == 'Capricorn'){
     resultImg.src = "./Photos/AJBrown.jpg" 
     var audio = new Audio('Sounds/Sound1.mp3');
@@ -138,28 +138,28 @@ let birthday = document.getElementById('submit');
 birthday.addEventListener('click', () => {dateSubmission();});
 
 const capricornButton = document.getElementById('Capricornus');
-capricornButton.addEventListener('click', () => {  astrological_sign = 'Capricorn';  dateSubmission(); });
+capricornButton.addEventListener('click', () => {  astrological_sign = 'Capricorn';  result(); });
 
 const SagittariusButton = document.getElementById('Saggitarius');
-SagittariusButton.addEventListener('click', () => {  astrological_sign = 'Sagittarius';  dateSubmission(); });
+SagittariusButton.addEventListener('click', () => {  astrological_sign = 'Sagittarius';  result(); });
 
 const ScorpioButton = document.getElementById('Scorpio');
-ScorpioButton.addEventListener('click', () => {  astrological_sign = 'Scorpio';  dateSubmission(); });
+ScorpioButton.addEventListener('click', () => {  astrological_sign = 'Scorpio';  result(); });
 
 const LibraButton = document.getElementById('Libra');
-LibraButton.addEventListener('click', () => {  astrological_sign = 'Libra';  dateSubmission(); });
+LibraButton.addEventListener('click', () => {  astrological_sign = 'Libra';  result(); });
 
 const VirgoButton = document.getElementById('Virgo');
-VirgoButton.addEventListener('click', () => { astrological_sign = 'Virgo'; dateSubmission(); });
+VirgoButton.addEventListener('click', () => { astrological_sign = 'Virgo'; result(); });
 
 const LeoButton = document.getElementById('Leo');
-LeoButton.addEventListener('click', () => {  astrological_sign = 'Leo';   dateSubmission(); });
+LeoButton.addEventListener('click', () => {  astrological_sign = 'Leo';   result(); });
 
 const CancerButton = document.getElementById('Cancer');
-CancerButton.addEventListener('click', () => {  astrological_sign = 'Cancer';  dateSubmission();});
+CancerButton.addEventListener('click', () => {  astrological_sign = 'Cancer';  result();});
 
 const GeminiButton = document.getElementById('Gemini');
-GeminiButton.addEventListener('click', () => {  astrological_sign = 'Gemini';   dateSubmission(); });
+GeminiButton.addEventListener('click', () => {  astrological_sign = 'Gemini';   result(); });
 
 const TaurusButton = document.getElementById('Taurus');
 TaurusButton.addEventListener('click', () => {  astrological_sign = 'Taurus';  dateSubmission(); });
